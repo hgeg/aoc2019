@@ -23,8 +23,7 @@ value p (Source l m) = case M.lookup p m of
 execute :: Int -> Int -> Int ->Int
 execute 1  x y = x + y
 execute 2  x y = x * y
-execute 99 _ _ = -1
-execute _  _ _ = -1
+execute _  _ _ = error "invalid opcode"
 
 eval :: Int -> Source -> Source
 eval p s@(Source l m) 
